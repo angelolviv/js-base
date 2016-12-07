@@ -36,12 +36,12 @@ function get(a, b, c) {
     }
     else if (d === 0) {
         var x = -b / 2 * a;
-        return 'D= ' + d + 'x =' + x;
+        return 'D= ' + d + 'x =' + x.toPrecision(2);
     }
     else {
         var x1 = (-b + Math.sqrt(d)) / 2 * a;
         var x2 = (-b - Math.sqrt(d)) / 2 * a;
-        return 'D= ' + d + '. x1= ' + x1 + ', x2 = ' + x2 + '.';
+        return 'D= ' + d + '. x1= ' + x1.toPrecision(2) + ', x2 = ' + x2.toPrecision(2) + '.';
     }
 }
 
