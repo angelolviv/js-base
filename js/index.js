@@ -29,13 +29,13 @@
 // document.write(result);
 
 
-function get(a, b, c) {
+function resolve(a, b, c) {
     var d = Math.pow(b, 2) - (4 * a * c);
     if (d < 0) {
         return 'D=' + d + '. Дійсних коренів немає.';
     }
     else if (d === 0) {
-        var x = -b / 2 * a;
+        var x = -b / (2 * a);
         return 'D= ' + d + 'x =' + x.toPrecision(2);
     }
     else {
@@ -48,5 +48,5 @@ function get(a, b, c) {
 var a = Number(prompt('Введіть значення а'));
 var b = Number(prompt('Введіть значення b'));
 var c = Number(prompt('Введіть значення с'));
-var xxx = get(a, b, c);
-document.write(xxx);
+var result = resolve(a, b, c);
+document.write(result);
